@@ -147,29 +147,6 @@ body.dark-theme {
 }
 
 
-
-
-.profile__info {
-  grid-template-columns: repeat(3, max-content);
-  justify-content: center;
-  column-gap: 2.5rem;
-}
-
-.profile__info-group {
-  text-align: center;
-}
-
-.profile__info-number {
-  font-size: var(--normal-font-size);
-  margin-bottom: .25rem;
-}
-
-.profile__info-description {
-  font-size: var(--smaller-font-size);
-  font-weight: 500;
-}
-
-
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-flex;

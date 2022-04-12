@@ -1,0 +1,19 @@
+.ProfileInfo {
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+.InfoGroup {
+  text-align: center;
+}
+
+.InfoNumber {
+  font-size: var(--normal-font-size);
+  margin-bottom: .25rem;
+}
+
+.InfoDescr {
+  font-size: var(--smaller-font-size);
+  font-weight: 500;
+}
