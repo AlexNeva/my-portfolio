@@ -1,0 +1,12 @@
+.ToggleTheme {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--title-color);
+  transition: color 0.2s ease 0s;
+
+  &:hover {
+    color: var(--first-color);
+  }
+}

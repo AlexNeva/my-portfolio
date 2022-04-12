@@ -1,0 +1,18 @@
+.ProfileBtns, 
+.ProfileSmallBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProfileBtns {
+  column-gap: 1rem;
+}
+
+.ProfileSmallBtns {
+  column-gap: .25rem;
+}
+
+.Messanger {
+  font-size: 1.25rem;
+}

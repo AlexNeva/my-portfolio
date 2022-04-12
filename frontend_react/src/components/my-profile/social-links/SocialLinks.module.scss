@@ -1,0 +1,15 @@
+.Socials {
+  display: flex;
+  justify-content: center;
+  column-gap: .75rem;
+}
+
+.SocialsLink {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  transition: color 0.2s ease 0s;
+
+  &:hover {
+    color: var(--first-color);
+  }
+}
