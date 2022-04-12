@@ -1,10 +1,11 @@
-import React from 'react';
+import { motion } from 'framer-motion';
+import React, { forwardRef } from 'react';
 import { BsTelegram, BsWhatsapp } from 'react-icons/bs';
 import classes from './ProfileButtons.module.scss';
 
-const ProfileButtons = () => {
+export const ProfileButtons = forwardRef(({ }, ref) => {
   return (
-    <div className={classes.ProfileBtns}>
+    <div ref={ref} className={classes.ProfileBtns}>
 
       <a download="" href="assets/pdf/Gianell-Cv.pdf" className="button">
         Download CV <i className="ri-download-line"></i>
@@ -30,6 +31,6 @@ const ProfileButtons = () => {
       </div>
     </div>
   )
-}
+})
 
-export default ProfileButtons;
+export const MProfileButtons = motion(ProfileButtons);

@@ -1,22 +1,59 @@
 import React from 'react';
-import Advantages from './advantages/Advantages';
-import MyPhoto from './my-photo/MyPhoto';
-import ProfileButtons from './profile-buttons/ProfileButtons';
+import { motion } from 'framer-motion';
+import { MAdvantages } from './advantages/Advantages';
+import { MMyPhoto } from './my-photo/MyPhoto';
+import { MProfileButtons } from './profile-buttons/ProfileButtons';
 import SocialLinks from './social-links/SocialLinks';
 import classes from './MyProfile.module.scss';
 
+const animationSettings = {
+  hidden: {
+    y: 25,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      type: 'tween',
+      ease: 'easeOut'
+    }
+  }
+}
+
 const MyProfile = () => {
   return (
-    <div className={`${classes.ProfileContainer} grid`}>
+    <motion.div
+      transition={
+        { staggerChildren: 0.3, }
+      }
+      initial='hidden'
+      whileInView='visible'
+
+      className={`${classes.ProfileContainer} grid`}
+    >
       <div className={classes.ProfileData}>
-        <MyPhoto />
-        <h2 className={classes.ProfileName}>Alexandr Nevsky</h2>
-        <h3 className={classes.ProfileProfession}>Frontend developer</h3>
+        <MMyPhoto
+          variants={animationSettings}
+        />
+        <motion.h2
+          variants={animationSettings}
+          className={classes.ProfileName}
+        >
+          Alexandr Nevsky
+        </motion.h2>
+        <motion.h3
+          variants={animationSettings}
+          className={classes.ProfileProfession}
+        >
+          Frontend developer
+        </motion.h3>
         <SocialLinks />
       </div>
-      <Advantages />
-      <ProfileButtons />
-    </div>
+      <MAdvantages variants={animationSettings} />
+      <MProfileButtons variants={animationSettings} />
+    </motion.div>
   )
 }
 

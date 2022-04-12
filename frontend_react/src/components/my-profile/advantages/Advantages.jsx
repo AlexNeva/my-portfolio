@@ -1,9 +1,10 @@
-import React from 'react';
+import { motion } from 'framer-motion';
+import React, { forwardRef } from 'react';
 import classes from './Advantages.module.scss';
 
-const Advantages = () => {
+export const Advantages = forwardRef(({ ...props }, ref) => {
   return (
-    <div className={`${classes.ProfileInfo} grid`}>
+    <div ref={ref} className={`${classes.ProfileInfo} grid`}>
       <div className={classes.InfoGroup}>
         <h3 className={classes.InfoNumber}>2</h3>
         <p className={classes.InfoDescr}>
@@ -22,6 +23,6 @@ const Advantages = () => {
       </div>
     </div>
   )
-}
+})
 
-export default Advantages;
+export const MAdvantages = motion(Advantages);
