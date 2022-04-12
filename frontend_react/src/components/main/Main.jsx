@@ -8,7 +8,7 @@ const Main = () => {
         <Filter />
         <div class="filters__sections">
 
-          <div class="projects__content grid filters__active" data-content id="projects">
+          <div class="projects__content grid filters__active">
             <article class="projects__card">
 
               <img src="assets/img/project1.jpg" alt="" class="projects__img" />
@@ -82,7 +82,7 @@ const Main = () => {
           </div>
 
 
-          <div class="skills__content grid" data-content id="skills">
+          <div class="skills__content grid" data-content>
             <div class="skills__area">
               <h3 class="skills__title">Frontend Developer</h3>
 
