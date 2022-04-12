@@ -10,8 +10,8 @@ const MyProfile = () => {
     <div className={`${classes.ProfileContainer} grid`}>
       <div className={classes.ProfileData}>
         <MyPhoto />
-        <h2 className={classes.ProfileName}>Alexandr</h2>
-        <h3 className={classes.ProfileSername}>Nevsky</h3>
+        <h2 className={classes.ProfileName}>Alexandr Nevsky</h2>
+        <h3 className={classes.ProfileProfession}>Frontend developer</h3>
         <SocialLinks />
       </div>
       <Advantages />
