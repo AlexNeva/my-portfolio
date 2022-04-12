@@ -1,0 +1,35 @@
+.Filter {
+  margin: 2rem auto 2.5rem;
+  background-color: var(--text-color-lighten);
+  padding: .375rem;
+  border-radius: .75rem;
+  display: flex;
+  justify-content: space-between;
+  column-gap: .5rem;
+  max-width: 300px;
+  
+}
+
+.FilterBtn {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  font-family: var(--body-font);
+  font-weight: 500;
+  border-radius: .75rem;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.2s ease 0s;
+
+  &:hover {
+    background-color: var(--body-color);
+  }
+
+}
+
+.FilterBtnActive {
+  background-color: var(--body-color);
+}
