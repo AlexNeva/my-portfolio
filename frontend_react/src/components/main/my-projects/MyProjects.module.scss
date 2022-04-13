@@ -1,0 +1,5 @@
+.Projects {
+  grid-template-columns: repeat(auto-fit, minmax(280px, calc(50% - 1.5rem / 2)));
+  justify-content: center;
+}
+

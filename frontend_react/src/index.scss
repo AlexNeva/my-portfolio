@@ -32,6 +32,7 @@
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
+  --container-padding: 1rem;
 }
 
 @media screen and (min-width: 968px) {
@@ -56,6 +57,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  min-width: 320px;
   // transition: .3s; /* For animation dark mode */
 }
 
@@ -129,10 +131,18 @@ body.dark-theme {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+.container, .header-container {
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.header-container {
+  max-width: calc(992px + 2 * var(--container-padding));
+}
+
 .container {
-  max-width: 968px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  max-width: calc(768px + 2 * var(--container-padding));
 }
 
 .grid {
@@ -175,55 +185,6 @@ body.dark-theme {
 
 .button__gray:hover {
   background-color: var(--text-color-light);
-}
-
-/*=============== PROJECTS ===============*/
-.projects__card {
-  position: relative;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-
-.projects__card img {
-  width: 100%;
-  height: 100%;
-}
-
-.projects__modal {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: -100%;
-  left: 0;
-  background: linear-gradient(180deg, 
-              hsla(var(--hue), 24%, 40%, .3) 0%, 
-              hsla(var(--hue), 24%, 4%, 1) 95%);
-  display: grid;
-  align-items: flex-end;
-  padding: 1.5rem 1.25rem;
-  transition: .3s;
-}
-
-.projects__subtitle, 
-.projects__title {
-  color: #fff;
-}
-
-.projects__subtitle {
-  font-size: var(--smaller-font-size);
-}
-
-.projects__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: .75rem;
-}
-
-.projects__button {
-  padding: .5rem;
-}
-
-.projects__card:hover .projects__modal {
-  bottom: 0;
 }
 
 /*=============== SKILLS ===============*/
@@ -290,29 +251,10 @@ body.dark-theme {
   color: var(--text-color-light);
 }
 
-/*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar {
-  width: .6rem;
-  border-radius: .5rem;
-  background-color: hsl(var(--hue), 8%, 66%);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: hsl(var(--hue), 8%, 54%);
-  border-radius: .5rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(var(--hue), 8%, 44%);
-}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
-  .container {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
 
   .profile__info {
     column-gap: 1.5rem;
@@ -354,10 +296,7 @@ body.dark-theme {
 
 /* For large devices */
 @media screen and (min-width: 992px) {
-  .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  
 
   .change-theme {
     top: 2.5rem;

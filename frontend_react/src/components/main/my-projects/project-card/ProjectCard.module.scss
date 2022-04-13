@@ -1,0 +1,80 @@
+.ProjectsCard {
+  padding-bottom: 85%;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.ProjectsOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, 
+              hsla(var(--hue), 24%, 40%, .3) 0%, 
+              hsla(var(--hue), 24%, 4%, 1) 95%);
+  display: grid;
+  align-items: flex-end;
+  padding: 1.5rem 1.25rem;
+  transition: .3s;
+}
+
+.ProjectSubtitle, 
+.ProjectTitle {
+  color: #fff;
+}
+
+.ProjectSubtitle {
+  font-size: var(--smaller-font-size);
+}
+
+.ProjectTitle {
+  font-size: var(--h3-font-size);
+  margin-bottom: .75rem;
+}
+
+.ProjectsLink {
+  padding: .3rem;
+  font-size: 1.2rem;
+}
+
+.CardBtn {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 5rem;
+  height: 5rem;
+  border: 0;
+  background-color: rgba($color: #000000, $alpha: 0.65);
+  border-radius: 1rem 0 0 0;
+  font-size: 2rem;
+  color: rgba($color: #fff, $alpha: 0.9);
+  transition: color 0.2s ease 0s;
+
+  &:hover {
+    color: rgba($color: #fff, $alpha: 1);
+  }
+
+  svg {
+    transition: transform 0.2s ease-in-out 0s;
+  }
+}
+
+.RotateIcon {
+  svg {
+    transform: rotate(45deg);
+  }
+  
+}
