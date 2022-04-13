@@ -20,7 +20,7 @@ const cardAnimations = {
 }
 
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
 
   const [isActive, setActive] = useState(false);
 
@@ -37,7 +37,7 @@ const ProjectCard = () => {
       className={classes.ProjectsCard}
     >
 
-      <img src="https://super-krasota.ru/wp-content/uploads/2019/04/17bac04a49da4e3cea95068e60ca5518.jpg" alt="" className="projects__img" />
+      <img src={props.priviewUrl} alt="" className="projects__img" />
 
       <AnimatePresence>
         {
@@ -54,9 +54,16 @@ const ProjectCard = () => {
               }}
             >
               <div>
-                <span className={classes.ProjectSubtitle}>Web</span>
-                <h3 className={classes.ProjectTitle}>Payment Site</h3>
-                <a href="#"
+                <span className={classes.ProjectSubtitle}>
+                  {props.category}
+                </span>
+                <h3 className={classes.ProjectTitle}>
+                  {props.name}
+                </h3>
+                <a
+                  target='_blank'
+                  rel="noopener"
+                  href={props.link}
                   className={`${classes.ProjectsLink} button button__small`}
                 >
                   <BsLink45Deg />

@@ -14,7 +14,7 @@ export const ProfileButtons = forwardRef(({ }, ref) => {
       <div className={classes.ProfileSmallBtns}>
 
         <a
-          href="https://api.whatsapp.com/send?phone=51123456789&text=Hello, more information!"
+          href="https://api.whatsapp.com/send?phone=79516653214"
           target="_blank"
           className={`${classes.Messanger} button button__small button__gray`}
         >
@@ -22,7 +22,7 @@ export const ProfileButtons = forwardRef(({ }, ref) => {
         </a>
 
         <a
-          href="https://m.me/bedimcode"
+          href="https://t.me/XandrNew"
           target="_blank"
           className={`${classes.Messanger} button button__small button__gray`}
         >
