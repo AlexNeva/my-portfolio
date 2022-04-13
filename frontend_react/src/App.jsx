@@ -6,12 +6,14 @@ import MyProfile from "./components/my-profile/MyProfile";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <MyProfile />
-      <Main />
+    <>
+      <div>
+        <Header />
+        <MyProfile />
+        <Main />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

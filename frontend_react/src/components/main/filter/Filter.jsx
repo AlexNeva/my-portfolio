@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
 import classes from './Filter.module.scss';
 
-const Filter = () => {
-
-  const [filter, setFilter] = useState([
-    {
-      title: 'Projects',
-      isActive: true,
-    },
-    {
-      title: 'Skills',
-      isActive: false,
-    },
-  ])
+const Filter = ({ filter, changeTab }) => {
 
 
   const setClass = (param) => {
@@ -23,13 +12,6 @@ const Filter = () => {
     return `${classes.FilterBtn}`;
   }
 
-  const clickHandler = (id) => {
-    setFilter((prev) => (
-      prev
-        .map((item, idx) => id === idx ? { ...item, isActive: true } : { ...item, isActive: false })
-    ))
-  }
-
   return (
     <div className={classes.Filter}>
       {
@@ -37,7 +19,7 @@ const Filter = () => {
           <button
             key={item.title + idx}
             className={setClass(item.isActive)}
-            onClick={() => clickHandler(idx)}
+            onClick={() => changeTab(idx)}
           >
             {item.title}
           </button>

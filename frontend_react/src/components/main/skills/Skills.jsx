@@ -55,8 +55,9 @@ const Skills = () => {
   return (
     <div className={`${classes.Skills} grid`}>
       {
-        skills.map(skill => (
+        skills.map((skill, idx) => (
           <SkillsItem
+            key={skill.typeDev + idx}
             {...skill}
           />
         ))
