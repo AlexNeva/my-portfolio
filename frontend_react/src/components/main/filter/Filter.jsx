@@ -35,7 +35,7 @@ const Filter = ({ filter, changeTab }) => {
       initial='hidden'
       whileInView='visible'
       viewport={{ amount: 0.2, once: true }}
-      className={classes.Filter}
+      className={`${classes.Filter} filters__content`}
     >
       {
         filter.map((item, idx) => (

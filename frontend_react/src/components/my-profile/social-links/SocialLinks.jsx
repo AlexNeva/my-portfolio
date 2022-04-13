@@ -31,7 +31,7 @@ const SocialLinks = () => {
         className={classes.SocialsItem}
         variants={animateSocials}
       >
-        <a href="https://www.instagram.com/sashnevski" target="_blank" className={classes.SocialsLink}>
+        <a href="https://www.instagram.com/sashnevski" rel="noopener noreferrer" target="_blank" className={classes.SocialsLink}>
           <BsInstagram />
         </a>
       </motion.li>
@@ -39,7 +39,11 @@ const SocialLinks = () => {
         className={classes.SocialsItem}
         variants={animateSocials}
       >
-        <a href="https://www.linkedin.com/" target="_blank" className={classes.SocialsLink}>
+        <a
+          href="https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%BD%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9-0255a6203/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.SocialsLink}>
           <BsLinkedin />
         </a>
       </motion.li>
@@ -47,7 +51,7 @@ const SocialLinks = () => {
         className={classes.SocialsItem}
         variants={animateSocials}
       >
-        <a href="https://github.com/AlexNeva" target="_blank" className={classes.SocialsLink}>
+        <a href="https://github.com/AlexNeva" rel="noopener noreferrer" target="_blank" className={classes.SocialsLink}>
           <BsGithub />
         </a>
       </motion.li>

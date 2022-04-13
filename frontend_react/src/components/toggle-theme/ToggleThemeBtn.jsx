@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ThemeContext } from '../../context/theme-context';
 import classes from './ToggleTheme.module.scss';
 import { BsMoonStars, BsSun } from 'react-icons/bs';
 
 const ToggleThemeBtn = () => {
 
-  const [dark, setDark] = useState(false);
+  const { isDark, setTheme } = useContext(ThemeContext);
 
-  const clickHandler = () => {
-    setDark((prev) => !prev)
+  const themeToggler = () => {
+    setTheme(prev => !prev)
   }
 
   return (
     <button
       className={classes.ToggleTheme}
       type='button'
-      onClick={clickHandler}>
+      onClick={themeToggler}
+    >
       {
-        dark
+        isDark
           ?
           <BsSun />
           :
