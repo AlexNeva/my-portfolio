@@ -1,7 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import classes from './Filter.module.scss';
 
 const Filter = ({ filter, changeTab }) => {
+
+  const filterAnimation = {
+    hidden: {
+      y: 25,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        type: 'tween',
+        ease: 'easeOut'
+      }
+    }
+  }
 
 
   const setClass = (param) => {
@@ -13,7 +30,13 @@ const Filter = ({ filter, changeTab }) => {
   }
 
   return (
-    <div className={classes.Filter}>
+    <motion.div
+      variants={filterAnimation}
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ amount: 0.2, once: true }}
+      className={classes.Filter}
+    >
       {
         filter.map((item, idx) => (
           <button
@@ -25,7 +48,7 @@ const Filter = ({ filter, changeTab }) => {
           </button>
         ))
       }
-    </div>
+    </motion.div>
   )
 }
 
