@@ -7,7 +7,7 @@ export const ProfileButtons = forwardRef(({ }, ref) => {
   return (
     <div ref={ref} className={classes.ProfileBtns}>
 
-      <a download="" href="/assets/front-dev.pdf" className="button">
+      <a download="" href="/assets/front-dev.pdf" className={`${classes.Download} button`}>
         Download CV <i className="ri-download-line"></i>
       </a>
 

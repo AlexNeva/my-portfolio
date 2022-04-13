@@ -39,13 +39,13 @@ const Main = () => {
           filter={filter}
           changeTab={clickHandler}
         />
-        <div className="filters__sections">
-          {
-            filter.map(filter => (
-              filter.isActive && filter.getComponent()
-            ))
-          }
-        </div>
+
+        {
+          filter.map(filter => (
+            filter.isActive && filter.getComponent()
+          ))
+        }
+
       </section>
     </main>
   )

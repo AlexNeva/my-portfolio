@@ -1,7 +1,12 @@
 .Socials {
   display: flex;
   justify-content: center;
-  column-gap: .75rem;
+}
+
+.SocialsItem {
+  &:not(:last-child) {
+    margin-right: 0.75rem;
+  }
 }
 
 .SocialsLink {

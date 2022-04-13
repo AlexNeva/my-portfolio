@@ -41,7 +41,7 @@ const MyProjects = () => {
   ]
 
   return (
-    <div className={`${classes.Projects} grid`}>
+    <div className={classes.Projects}>
       {
         projectsData.map(project => (
           <ProjectCard key={project.name} {...project} />
