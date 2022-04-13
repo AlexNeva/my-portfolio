@@ -1,0 +1,33 @@
+.SkillsTitle {
+  font-size: var(--h3-font-size);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.SkillsBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 1.5rem 3rem;
+  text-align: center;
+}
+
+.SkillsData {
+  display: grid;
+  column-gap: .5rem;
+}
+
+.skills__data i {
+  font-size: 1rem;
+  color: var(--first-color);
+}
+
+.SkillsName {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.SkillsLevel {
+  font-size: var(--smaller-font-size);
+}
